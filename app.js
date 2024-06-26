@@ -1,12 +1,13 @@
 //Variables
-let numSecret = 5;
+let numSecret = Math.floor(Math.random() * numMaxPosible) + 1;
+let numMaxPosible = 50;
 let numUser = 0;
 let intentos = 1;
-let maxIntentos = 3;
+let maxIntentos = 10;
 
 while (numUser != numSecret) {
     // REALIZAMOS LA COMPARACION
-    numUser = prompt("Ingrese un numero entre 1 y 10 por favor: ");
+    numUser = parseInt(prompt(`Ingrese un numero entre 1 y ${numMaxPosible} por favor: `));
     if (numUser == numSecret) {
         alert(`Acertaste, el número es ${numUser} Lo hiciste en ${intentos} ${intentos == 1 ? 'vez' : 'veces'}`);
     } else if (numUser > numSecret) {
@@ -17,7 +18,7 @@ while (numUser != numSecret) {
     // INCREMENTAMOS EL CONTADOR CUANDO NO ACIERTA
     intentos++
     if (intentos > maxIntentos) {
-        alert('Llegaste al limite de intentos')
+        alert(`Llegaste al limite de intentos, el número era: ${numSecret}`)
         break;
     };
 };
