@@ -1,4 +1,4 @@
-//Variables
+// Variables
 let numSecret = Math.floor(Math.random() * numMaxPosible) + 1;
 let numMaxPosible = 50;
 let numUser = 0;
