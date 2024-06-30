@@ -1,15 +1,15 @@
 // Variables
-let numSecret = Math.floor(Math.random() * numMaxPosible) + 1;
-let numMaxPosible = 50;
 let numUser = 0;
+let numMaxPosible = 50;
+let numSecret = Math.floor(Math.random() * numMaxPosible) + 1;
+let maxIntentos = 5;
 let intentos = 1;
-let maxIntentos = 10;
 
 while (numUser != numSecret) {
     // REALIZAMOS LA COMPARACION
     numUser = parseInt(prompt(`Ingrese un numero entre 1 y ${numMaxPosible} por favor: `));
     if (numUser == numSecret) {
-        alert(`Acertaste, el número es ${numUser} Lo hiciste en ${intentos} ${intentos == 1 ? 'vez' : 'veces'}`);
+        alert(`Acertaste, el número es ${numUser} Lo hiciste en ${intentos} ${intentos == 1 ? 'intento' : 'intentos'}`);
     } else if (numUser > numSecret) {
         alert('El número secreto es menor');
     } else {
